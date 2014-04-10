@@ -9,5 +9,3 @@ plan tests => 1;
 BEGIN {
     use_ok( 'Control::Flow' ) || print "Bail out!\n";
 }
-
-diag( "Testing Control::Flow $Control::Flow::VERSION, Perl $], $^X" );
