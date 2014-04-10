@@ -1,0 +1,9 @@
+Makefile
+Makefile.old
+MANIFEST
+MYMETA.json
+MYMETA.yml
+.build
+_build
+Build
+Activity-Transactional-*
