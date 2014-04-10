@@ -1,21 +1,7 @@
 package Control::Flow;
 
 use Moose::Role;
-use Set::Scalar;
-
-requires 'flow';
-
-has _tags => (
-  isa => 'HashRef',
-  is => 'ro',
-  default => sub {+{}},
-  traits => ['Hash'],
-  handles => {
-    _set_tag => 'set',
-    _get_tag => 'get'
-    _tag_keys => 'keys',
-  },
-);
+with 'Control::Flow::Registry::HashRef', 'Control::Flow::Role::Flow';
 
 sub hook {
   my ($self,$tag,$hook) = @_;
@@ -29,6 +15,7 @@ sub divert {
   }
 }
 
+1;
 __END__
 =head1 NAME
 
